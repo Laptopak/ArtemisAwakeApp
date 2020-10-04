@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddCalendarEventActivity">
+
+    <TextView
+        android:id="@+id/add_task_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add Task"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_task_textView">
+
+        <EditText
+            android:id="@+id/task_name_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Task name:" />
+
+        <EditText
+            android:id="@+id/task_note_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Task notes:" />
+
+
+        <TextView
+            android:id="@+id/start_time_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Start Time:" />
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/start_time_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Time:" />
+
+            <Button
+                android:id="@+id/choose_start_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choose time"
+                android:onClick="onClickChooseStartTimeButton"
+                />
+
+            <EditText
+                android:id="@+id/start_date_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Date:" />
+
+            <Button
+                android:id="@+id/choose_start_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choose date"
+                tools:layout_editor_absoluteX="200dp"
+                tools:layout_editor_absoluteY="458dp"
+                android:onClick="onClickChooseStartDateButton"
+                />
+
+
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/end_time_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="End Time:" />
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/end_time_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Time:" />
+
+            <Button
+                android:id="@+id/choose_end_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choose time"
+                android:onClick="onClickChooseEndTimeButton"
+                />
+
+            <EditText
+                android:id="@+id/end_date_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Date:" />
+
+            <Button
+                android:id="@+id/choose_end_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choose date"
+                tools:layout_editor_absoluteX="200dp"
+                tools:layout_editor_absoluteY="458dp"
+                android:onClick="onClickChooseEndDateButton"
+                />
+
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        android:onClick="onClickSaveTask"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

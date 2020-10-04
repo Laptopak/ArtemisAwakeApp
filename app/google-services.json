@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "979997975392",
+    "firebase_url": "https://artemis-awake-app.firebaseio.com",
+    "project_id": "artemis-awake-app",
+    "storage_bucket": "artemis-awake-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979997975392:android:6c6dbadea41151e19b7405",
+        "android_client_info": {
+          "package_name": "akhtemov.vladlen.artemisawakeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979997975392-ngb9c68ojd1qlbvmrdp7nfulep9jgnrq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHf-v_9ttJG3pJKb6nuUX9FurccKSczao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979997975392-ngb9c68ojd1qlbvmrdp7nfulep9jgnrq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
