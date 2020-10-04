@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="ARTEMIS AWAKE APP"
+        android:textColor="#33B5E5"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
