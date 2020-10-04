@@ -21,50 +21,58 @@
             android:id="@+id/position_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Astronaut #" />
+            android:text="Astronaut #"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Name:" />
+            android:text="Name:"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/male_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="isMale (0 - false, 1 - true):" />
+            android:text="isMale (0 - false, 1 - true):"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/age_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Age:" />
+            android:text="Age:"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/height_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Height:" />
+            android:text="Height:"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/mass_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mass:" />
+            android:text="Mass:"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/activity_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Activity:" />
+            android:text="Activity:"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/dna_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DNA #" />
+            android:text="DNA #"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/job_role_text_view"
@@ -72,14 +80,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Job Role:"
-
+            android:textColor="#33B5E5"
             />
 
         <TextView
             android:id="@+id/level_of_importance_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Level Of Importance (1-10):" />
+            android:text="Level Of Importance (1-10):"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/time_zone_text_view"
@@ -87,14 +96,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Time Zone (Number):"
-
+            android:textColor="#33B5E5"
             />
 
         <TextView
             android:id="@+id/note_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notes:" />
+            android:text="Notes:"
+            android:textColor="#33B5E5"/>
 
         <TextView
             android:id="@+id/bmr_text_view"
@@ -102,6 +112,7 @@
             android:layout_height="wrap_content"
             android:text="BMR:"
             android:layout_marginTop="8dp"
+            android:textColor="#33B5E5"
             />
 
         <TextView
@@ -109,6 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BMR with activity:"
+            android:textColor="#33B5E5"
             />
     </TableLayout>
 

@@ -13,7 +13,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
-import akhtemov.vladlen.artemisawakeapp.Constant;
 import akhtemov.vladlen.artemisawakeapp.R;
 
 public class AddCalendarEventActivity extends AppCompatActivity {
@@ -44,6 +43,11 @@ public class AddCalendarEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_calendar_event);
 
+        init();
+        addEditTextOnClickListeners();
+    }
+
+    private void init() {
         taskNameEditText = findViewById(R.id.task_name_edit_text);
         taskNoteEditText = findViewById(R.id.task_note_edit_text);
         startTimeEditText = findViewById(R.id.start_time_edit_text);
@@ -52,86 +56,100 @@ public class AddCalendarEventActivity extends AppCompatActivity {
         endDateEditText = findViewById(R.id.end_date_edit_text);
     }
 
-    public void onClickChooseStartTimeButton(View view) {
-        TimePickerDialog timePickerDialog = new TimePickerDialog(
-                this,
-                new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        startHourOfDay = hourOfDay;
-                        startMinute = minute;
+    private void addEditTextOnClickListeners() {
+        startTimeEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(
+                        AddCalendarEventActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                startHourOfDay = hourOfDay;
+                                startMinute = minute;
 
-                        startTimeEditText.setText(hourOfDay + ":" + minute);
-                    }
-                },
-                Calendar.getInstance().get(Calendar.HOUR_OF_DAY),
-                Calendar.getInstance().get(Calendar.MINUTE),
-                true
-        );
+                                startTimeEditText.setText(hourOfDay + ":" + minute);
+                            }
+                        },
+                        Calendar.getInstance().get(Calendar.HOUR_OF_DAY),
+                        Calendar.getInstance().get(Calendar.MINUTE),
+                        true
+                );
 
-        timePickerDialog.show();
-    }
+                timePickerDialog.show();
+            }
+        });
 
-    public void onClickChooseStartDateButton(View view) {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-                this,
-                new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        startYear = year;
-                        startMonth = month;
-                        startDay = dayOfMonth;
+        startDateEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        AddCalendarEventActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                startYear = year;
+                                startMonth = month;
+                                startDay = dayOfMonth;
 
-                        startDateEditText.setText(year + "/" + month + "/" + dayOfMonth);
-                    }
-                },
-                Calendar.getInstance().get(Calendar.YEAR),
-                Calendar.getInstance().get(Calendar.MONTH),
-                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
-        );
+                                startDateEditText.setText(year + "/" + month + "/" + dayOfMonth);
+                            }
+                        },
+                        Calendar.getInstance().get(Calendar.YEAR),
+                        Calendar.getInstance().get(Calendar.MONTH),
+                        Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+                );
 
-        datePickerDialog.show();
-    }
+                datePickerDialog.show();
+            }
+        });
 
-    public void onClickChooseEndTimeButton(View view) {
-        TimePickerDialog timePickerDialog = new TimePickerDialog(
-                this,
-                new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        endHourOfDay = hourOfDay;
-                        endMinute = minute;
+        endTimeEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimePickerDialog timePickerDialog = new TimePickerDialog(
+                        AddCalendarEventActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                endHourOfDay = hourOfDay;
+                                endMinute = minute;
 
-                        endTimeEditText.setText(hourOfDay + ":" + minute);
-                    }
-                },
-                Calendar.getInstance().get(Calendar.HOUR_OF_DAY),
-                Calendar.getInstance().get(Calendar.MINUTE),
-                true
-        );
+                                endTimeEditText.setText(hourOfDay + ":" + minute);
+                            }
+                        },
+                        Calendar.getInstance().get(Calendar.HOUR_OF_DAY),
+                        Calendar.getInstance().get(Calendar.MINUTE),
+                        true
+                );
 
-        timePickerDialog.show();
-    }
+                timePickerDialog.show();
+            }
+        });
 
-    public void onClickChooseEndDateButton(View view) {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-                this,
-                new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        endYear = year;
-                        endMonth = month;
-                        endDay = dayOfMonth;
+        endDateEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        AddCalendarEventActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                endYear = year;
+                                endMonth = month;
+                                endDay = dayOfMonth;
 
-                        endDateEditText.setText(year + "/" + month + "/" + dayOfMonth);
-                    }
-                },
-                Calendar.getInstance().get(Calendar.YEAR),
-                Calendar.getInstance().get(Calendar.MONTH),
-                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
-        );
+                                endDateEditText.setText(year + "/" + month + "/" + dayOfMonth);
+                            }
+                        },
+                        Calendar.getInstance().get(Calendar.YEAR),
+                        Calendar.getInstance().get(Calendar.MONTH),
+                        Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+                );
 
-        datePickerDialog.show();
+                datePickerDialog.show();
+            }
+        });
     }
 
     public void onClickSaveTask(View view) {
