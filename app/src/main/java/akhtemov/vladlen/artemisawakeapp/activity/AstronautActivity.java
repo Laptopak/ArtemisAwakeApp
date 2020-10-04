@@ -104,7 +104,14 @@ public class AstronautActivity extends AppCompatActivity {
         positionTextView.setText("Astronaut #" + (getIntent().getIntExtra(Constant.POSITION, 0) + 1));
 
         nameTextView.setText("Name: " + getIntent().getStringExtra(Constant.NAME));
-        maleTextView.setText("isMale: " + male);
+
+        String maleString;
+
+        if (male == 1) maleString = "male";
+        else if (male == 0) maleString = "female";
+        else maleString = String.valueOf(male);
+
+        maleTextView.setText("Male: " + maleString);
         ageTextView.setText("Age: " + age);
         heightTextView.setText("Height: " + height);
         massTextView.setText("Mass: " + mass);
@@ -115,7 +122,7 @@ public class AstronautActivity extends AppCompatActivity {
         levelOfImportanceTextView.setText("Level Of Importance (1-10): " + getIntent().getStringExtra(Constant.LEVEL_OF_IMPORTANCE));
 
         timeZoneTextView.setText("Time Zone (Number): " + getIntent().getStringExtra(Constant.TIME_ZONE));
-        noteTextView.setText("Notes: " + getIntent().getStringExtra(Constant.NOTE));
+        noteTextView.setText("Note: " + getIntent().getStringExtra(Constant.NOTE));
 
         bmrTextView.setText("BMR: " + bmr + " kcal");
         bmrWithActivityTextView.setText("BMR with activity: " + bmrWithActivity + " kcal");
